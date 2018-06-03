@@ -1,6 +1,6 @@
-# [SimonRolfe.Common](src\SimonRolfe.Common)
+# [SimonRolfe.Common](../src/SimonRolfe.Common)
 
-## [Common](src\SimonRolfe.Common\Common.cs)
+## [Common](../src/SimonRolfe.Common/Common.cs)
 
 A few simple extension classes I've found handy over the years:
 
@@ -12,7 +12,7 @@ A few simple extension classes I've found handy over the years:
 
 And the only non-extension, **DataTableToCSV()** - this converts a DataTable to a CSV file (or, technically any column-delimited text file, as the delimiter is a parameter), optionally including headers as extracted from the DataTable.
 
-## [Logging](src\SimonRolfe.Common\Logging.cs)
+## [Logging](../src/SimonRolfe.Common/Logging.cs)
 
 A frankly completely unnecessary class that I wrote to speed up adding logging to code. It doesn't properly abstract away the Log4Net code, and doesn't actually offer a good reason for existing at all. Definitely another area I've learned over time: Not Invented Here is not healthy. :smile:
 

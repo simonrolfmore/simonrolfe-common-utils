@@ -1,4 +1,4 @@
-# [SimonRolfe.Data.Oracle](src/SimonRolfe.Data.Oracle)
+# [SimonRolfe.Data.Oracle](../src/SimonRolfe.Data.Oracle)
 
 A set of helper class and something you could charitably call a "micro-ORM" for accessing Oracle from .NET, something which used to be a great deal more fiddly than it is today.
 
@@ -9,13 +9,13 @@ However, it's good to learn from these things.
 
 The dependency on Oracle.DataAccess is 32-bit only, with substantially different returned data types for the 64-bit client. As such, everything but the simple Common project is 32-bit only.
 
-## [Config](src/SimonRolfe.Data.Oracle/Config.cs)
+## [Config](../src/SimonRolfe.Data.Oracle/Config.cs)
 
 We had started having problems with data access as a result of a change to network config, which (stupidly) occurred at the same time as a bunch of feature deployments. I wrote the Config class to allow the operations team to vary Oracle's Fetch Size (i.e packet size) as I was convinced that packets over a certain threshold (MTU limit) were being dropped and not fragmented and reassembled. 
 
 It's not important whether this was proven to be true, but it *is* important that instrumentation solved the problem: this provided quick way of "pulling a lever" to determine if this was the issue or not. The issue was destroying the entire data set, making measurement of the maximum permissible size difficult, so an extra debug pathway was added, which filled the data set a row and column at a time with extensive logging.
 
-## [DataAccess](src/SimonRolfe.Data.Oracle/DataAccess.cs)
+## [DataAccess](../src/SimonRolfe.Data.Oracle/DataAccess.cs)
 
 A long set of functions which map Oracle data types to .NET ones, and wrap up fetching Lists, single items etc from Oracle stored procedures, as this was the way the team was used to working (all logic in PL/SQL, web for presentation only). This shifted over time, but it was important to gain trust and be immediately helpful before proposing more radical things like moving logic out of the database, which had served the business well for years.
 

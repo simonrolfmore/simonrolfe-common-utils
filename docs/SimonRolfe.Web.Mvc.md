@@ -1,8 +1,8 @@
-# [SimonRolfe.Web.Mvc](src/SimonRolfe.Web.Mvc)
+# [SimonRolfe.Web.Mvc](../src/SimonRolfe.Web.Mvc)
 
 A mixed set of web helpers covering URL generation and modification, dealing with ASP.NET memberhip providers, validation regexes, and even an ASP.NET Razor custom control.
 
-## [Common](src/SimonRolfe.Web.Mvc/Common.cs)
+## [Common](../src/SimonRolfe.Web.Mvc/Common.cs)
 
 A mixed collection of helper functions needed for this particular system:
 
@@ -32,7 +32,7 @@ These functions should be unnecessary now, but were a life-saver at the time! Th
 - **ListToSelectList(IEnumerable&lt;TinyListItem&gt;):** Takes in an IEnumerable of TinyListItems, and outputs a SelectList.
 - **ListToSelectList(IEnumerable&lt;string&gt;):** Generates TinyListItems where the value and the text are the same, for speedy drop-downs.
 
-## [Consts](src/SimonRolfe.Web.Mvc/Consts.cs)
+## [Consts](../src/SimonRolfe.Web.Mvc/Consts.cs)
 
 A set of constants that I've ended up referring to more often than I care to think.
 
@@ -42,10 +42,10 @@ A set of constants that I've ended up referring to more often than I care to thi
 
 Can you tell I'm really bad with regexes, and really value the ones I steal or get to work?
 
-## [DataAccess](src/SimonRolfe.Web.Mvc/DataAccess.cs)
+## [DataAccess](../src/SimonRolfe.Web.Mvc/DataAccess.cs)
 
 Inherits from the [SimonRolfe.Data.Oracle.DataAccess](SimonRolfe.Data.Oracle.md) DataAccess class to fetch a list, each row comprising text and a value from Oracle, and generate a SelectList from it. This requires a surprisingly large amount of code.
 
-## [RequiredLabel](src/SimonRolfe.Web.Mvc/RequiredLabel.cs)
+## [RequiredLabel](../src/SimonRolfe.Web.Mvc/RequiredLabel.cs)
 
 A simple ASP.NET Razor control to render a "required" symbol (*) for each field that has a [RequiredAttribute](https://docs.microsoft.com/en-gb/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=netframework-4.7.1).
